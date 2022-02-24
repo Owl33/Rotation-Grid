@@ -1,0 +1,197 @@
+@charset "utf-8";
+body {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    perspective: 2000px;
+    background-color: #222;
+}
+a {
+    color: white;
+}
+.btn-menu {
+    position: fixed;
+    z-index: 30;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5em;
+    display: none;
+}
+#main-menu {
+    /* display: none; */
+    width: 200px;
+    height: 100vh;
+    background-color: #555555;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform-origin: left center;
+    transition: all 0.5s;
+    transform: rotateY(50deg);
+}
+#main-menu.on {
+    transform: rotateY(120deg);
+}
+.logo {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gnb {
+    margin-top: 100px;
+    text-align: center;
+}
+.gnb li {
+    line-height: 5rem;
+}
+#container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    transform-origin: right center;
+    transition: all 0.5s;
+}
+#container.on {
+    transform: rotateY(25deg) rotateZ(-1deg);
+}
+article {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s;
+}
+article.on {
+    opacity: 1;
+    z-index: 10;
+}
+article div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    transition: 0.8s;
+}
+
+article.on > div {
+    z-index: 1;
+    transform: rotateY(0deg);
+}
+.corsair div {
+    background-color: #222222;
+}
+.corsair div:nth-child(1) {
+    grid-column: 1 / span 2;
+    background-image: url("../images/corsair/img01_01.jpg");
+}
+.corsair div:nth-child(2) {
+    background-image: url("../images/corsair/img01_02.jpg");
+}
+.corsair div:nth-child(5) {
+    background-image: url("../images/corsair/img01_05.jpg");
+}
+
+.corsair div:nth-child(6) {
+    background-image: url("../images/corsair/img01_07.jpg");
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
+}
+.corsair div:nth-child(7) {
+    background-image: url("../images/corsair/k70.png");
+}
+.corsair div:nth-child(10) {
+    grid-column: 2 / span 2;
+    background-image: url("../images/corsair/img01_13.jpg");
+}
+
+.corsair div:last-child a {
+    padding: 20px;
+}
+.corsair div:last-child i {
+    color: white;
+    font-size: 1.5em;
+}
+
+/* razer */
+.razer div {
+    background-color: #272c1e;
+}
+.razer div:nth-child(1) {
+    background-image: url("../images/razer/images/img_01.jpg");
+}
+
+.razer div:nth-child(3) {
+    grid-column: 3 / span 2;
+    background-image: url("../images/razer/images/img_04.jpg");
+}
+.razer div:nth-child(4) {
+    grid-row: 2 / span 2;
+    background-image: url("../images/razer/images/HAZLE_06.jpg");
+}
+.razer div:nth-child(5) {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    background-image: url("../images/razer/images/img_11.jpg");
+}
+.razer div:nth-child(6) {
+    grid-row: 2 / span 2;
+    background-image: url("../images/razer/images/img_12.jpg");
+}
+.razer div:nth-child(8) {
+    background-image: url("../images/razer/images/img_16.jpg");
+}
+.razer div:nth-child(10) {
+    background-image: url("../images/razer/images/img_20.gif");
+}
+
+/* steel series*/
+
+.steel div:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+    background-image: url("../images/stellseries/images/dsek_01.jpg");
+    background-size: cover;
+}
+.steel div:nth-child(2) {
+    grid-column: 3 / span 2;
+    background-image: url("../images/stellseries/images/pad_02.jpg");
+}
+.steel div:nth-child(3) {
+    grid-column: 3 / span 2;
+    background-image: url("../images/stellseries/images/img01_10.jpg");
+}
+.steel div {
+    background-color: #232733;
+}
+.steel div:nth-child(5) {
+    background-image: url("../images/stellseries/images/img01_13.jpg");
+}
+.steel div:nth-child(6) {
+    grid-column: 1 / span 2;
+}
+.steel div:nth-child(7) {
+    background-image: url("../images/stellseries/images/img01_16.jpg");
+}
+i {
+    transition: 0.5s;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0.5;
+    color: white;
+}
