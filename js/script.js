@@ -14,7 +14,6 @@ const init = () => {
             burgur.style.display='block';
             delObj.classList.remove('on');
             main.children[idx].classList.add('on');
-            console.log(main.children[idx]);
         });
     });
 
